@@ -8,7 +8,7 @@ pub fn Navbar() -> Html {
     html! {
         <nav>
             <div class="container">
-                <img src="" alt="logo" class="nav-logo"/>
+                <img src="assets/Logo.png" alt="logo" class="nav-logo"/>
                 <ul class="nav-list">
                     <li class="nav-item">
                         <Link<AppRoute> to={AppRoute::Home} classes="nav-link">
