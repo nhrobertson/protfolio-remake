@@ -19,10 +19,10 @@ pub fn TabItem(props: &TabItemProps) -> Html {
     };
 
     html! {
-        <div class={classes!("tabitem", &props.class)}>
-            <button {onclick} class="tabitem-button">{ &props.title }</button>
+        <div class={classes!("tab-item", &props.class)}>
+            <button {onclick} class="tab-item-button">{ &props.title }</button>
             if *show_item {
-                <div class="tabitem-body">
+                <div class="tab-item-body">
                     { for props.children.iter() }
                 </div>
             }
