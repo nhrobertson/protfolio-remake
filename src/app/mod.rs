@@ -3,6 +3,9 @@ use yew_router::prelude::*;
 
 use crate::components::navbar::Navbar;
 use crate::pages::home::Home;
+use crate::pages::about::About;
+use crate::pages::research::Research;
+use crate::pages::projects::Projects;
 
 #[derive(Routable, Debug, Clone, PartialEq, Eq)]
 pub enum AppRoute {
@@ -23,9 +26,9 @@ pub enum AppRoute {
 pub fn switch(route: AppRoute) -> Html {
     match route     {
         AppRoute::Home => html! {<Home />},
-        AppRoute::About => html! {"TODO"},
-        AppRoute::Research => html! {"TODO"},
-        AppRoute::Projects => html! {"TODO"},
+        AppRoute::About => html! {<About />},
+        AppRoute::Research => html! {<Research />},
+        AppRoute::Projects => html! {<Projects />},
         AppRoute::Contact => html! {"TODO"},
     }
 }

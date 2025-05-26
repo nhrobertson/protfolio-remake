@@ -4,10 +4,10 @@ use crate::components::tabitem::TabItem;
 use crate::components::card::Card;
 
 #[function_component]
-pub fn Projects() -> Html {
+pub fn Research() -> Html {
     html! {
         <div class="container">
-            <h2>{"Projects"}</h2>
+            <h2>{"Research"}</h2>
             <p>{"TODO"}</p>
             <div class="tabitem-container">
                 <TabItem title="TODO 1">
