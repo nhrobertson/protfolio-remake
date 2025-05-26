@@ -1,0 +1,11 @@
+[package]
+name = "portfolio-remake"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gloo = "0.11.0"
+gloo-timers = "0.3.0"
+yew = { version = "0.21.0", features = ["csr"] }
+yew-hooks = "0.3.3"
+yew-router = "0.18.0"
