@@ -31,6 +31,11 @@ pub fn Navbar() -> Html {
                         </Link<AppRoute>>
                     </li>
                     <li class="nav-item">
+                        <Link<AppRoute> to={AppRoute::Games} classes="nav-link">
+                            { "Games" }
+                        </Link<AppRoute>>
+                    </li>
+                    <li class="nav-item">
                         <Link<AppRoute> to={AppRoute::Contact} classes="nav-link">
                             { "Contact" }
                         </Link<AppRoute>>

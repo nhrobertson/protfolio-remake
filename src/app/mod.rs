@@ -21,6 +21,8 @@ pub enum AppRoute {
     Projects,
     #[at("/contact")]
     Contact,
+    #[at("/games")]
+    Games,
 }
 
 pub fn switch(route: AppRoute) -> Html {
@@ -29,6 +31,7 @@ pub fn switch(route: AppRoute) -> Html {
         AppRoute::About => html! {<About />},
         AppRoute::Research => html! {<Research />},
         AppRoute::Projects => html! {<Projects />},
+        AppRoute::Games => html! {"TODO"},
         AppRoute::Contact => html! {"TODO"},
     }
 }

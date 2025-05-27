@@ -37,7 +37,7 @@ nav .nav-link { color: var(--clr-text-light); padding: var(--space-unit); border
 nav .nav-link:hover { background-color: var(--clr-accent); color: var(--clr-text-dark); }
 
 /* About Sections */
-.about-section { display: flex; align-items: center; justify-content: space-between; padding: calc(var(--space-unit)*4) 0; }
+.about-section { display: flex; align-items: center; justify-content: space-between; padding: calc(var(--space-unit)*2) 4%; }
 .about-section:nth-child(even) { background-color: var(--clr-secondary); }
 .about-section:nth-child(odd) { background-color: var(--clr-bg); }
 .about-section .about-image, .about-section .about-content { width: 45%; }
@@ -48,6 +48,7 @@ nav .nav-link:hover { background-color: var(--clr-accent); color: var(--clr-text
   align-items: center;
   justify-content: center;
   padding: var(--space-unit);
+  border-radius: 10px;
 }
 .about-section .about-image img {
   max-width: 100%;
@@ -57,6 +58,8 @@ nav .nav-link:hover { background-color: var(--clr-accent); color: var(--clr-text
 .about-section .about-content { padding: 0 var(--space-unit); }
 .about-section .about-content h2 { font-size: 1.8rem; margin-bottom: var(--space-unit); }
 .about-section .about-content p { font-size: 1rem; }
+
+.about-text { margin: 5%; }
 
 /* Home Sections */
 .upper-home-container { width: 100% !important; display: flex; align-items: center; justify-content: space-between; padding: calc(var(--space-unit)*1) 10%; }
@@ -78,6 +81,70 @@ nav .nav-link:hover { background-color: var(--clr-accent); color: var(--clr-text
 .card-img { width: 100px; height: 100px; object-fit: contain;}
 .links-card-container { display: flex; justify-content: space-between; flex-direction: column; align-items: center; color: blue;}
 
+/* Accordion wrapper */
+.tab-item {
+  background-color: var(--clr-secondary);
+  border-radius: 4px;
+  margin: var(--space-unit);
+  overflow: hidden;
+}
+
+/* Header button layout */
+.tab-item-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: calc(var(--space-unit) * 1);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Down‐arrow indicator */
+.tab-item-button::after {
+  content: "";
+  border: solid var(--clr-text-light);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Body content layout */
+
+/* Ensure the dropdown wrapper itself is visible */
+.tab-item-body {
+  background-color: var(--clr-card-bg);
+  padding: calc(var(--space-unit) * 2);
+}
+
+/* Style the inner container you’re already using */
+.tabitem-body-container {
+  display: flex;
+  gap: calc(var(--space-unit) * 0);
+  background-color: var(--clr-bg);
+}
+
+/* Let the text flow on the left… */
+.tabitem-body-container > *:first-child {
+  flex: 1;
+}
+
+/* …and lock the Card to a fixed width on the right */
+.tabitem-body-container > .card {
+  flex: 0 0 300px;
+  background-color: var(--clr-card-bg);
+}
+
+.tabitem-body-container .card {
+  padding: calc(var(--space-unit) * 1);
+  margin: 0;
+  background-color: white;
+}
 
 /* Responsive adjustments for accordion */
 @media (max-width: 768px) {
