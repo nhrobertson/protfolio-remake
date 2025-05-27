@@ -7,8 +7,10 @@ use crate::components::card::Card;
 pub fn Research() -> Html {
     html! {
         <div class="container">
-            <h2>{"Research"}</h2>
-            <p>{"Below you can find some research projects I have been involved with!"}</p>
+            <div class="info">
+                <h2>{"Research"}</h2>
+                <p>{"Below you can find some research projects I have been involved with!"}</p>
+            </div>
             <div class="tab-item-container">
                 <TabItem title="McNair Junior Fellows">
                     <div class="tabitem-body-container">

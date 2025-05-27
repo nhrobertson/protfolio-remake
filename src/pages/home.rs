@@ -35,17 +35,17 @@ fn upper_home() -> Html {
 fn lower_home() -> Html {
     html! {
         <div class="lower-home-container">
-            <Card title="Card 1" class="home-card">
-                <img class="card-img" src="" alt="Card Img TODO" />
-                <p class="card-p">{"TODO"}</p>
+            <Card title="Hard Work" class="home-card">
+                <img class="card-img" src="https://cdn-icons-png.flaticon.com/512/2163/2163311.png" alt="Card Img TODO" />
+                <p class="card-p">{"Tirelessly will work. I am very pationate about learning and getting things done!"}</p>
             </Card>
-            <Card title="Card 2" class="home-card">
-                <img class="card-img" src="" alt="Card Img TODO" />
-                <p class="card-p">{"TODO"}</p>
+            <Card title="Constant Learning" class="home-card">
+                <img class="card-img" src="https://cdn-icons-png.freepik.com/256/5295/5295315.png" alt="Card Img TODO" />
+                <p class="card-p">{"I want to know how things work. This pushes me to learn all I can about everything I can."}</p>
             </Card>
-            <Card title="Card 3" class="home-card">
-                <img class="card-img" src="" alt="Card Img TODO" />
-                <p class="card-p">{"TODO"}</p>
+            <Card title="Integrity" class="home-card">
+                <img class="card-img" src="https://cdn-icons-png.flaticon.com/512/12110/12110134.png" alt="Card Img TODO" />
+                <p class="card-p">{"I work to make sure everyone is happy. To do so, I hold myself to the utmost integrity with what I do."}</p>
             </Card>
         </div>
     }

@@ -7,6 +7,7 @@
   --clr-text-dark: #333;
   --clr-text-light: #fff;
   --clr-card-bg: #ddd;       /* Placeholder cards/images */
+  --clr-tur: #76E7CD;
 
   /* Typography & Spacing */
   --font-main: "Calibri", sans-serif;
@@ -21,7 +22,8 @@ body {
   color: var(--clr-text-dark);
   line-height: 1.6;
 }
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: #0066ff; }
+a:hover { color: darkblue; }
 ul, oll { list-style: none; }
 
 /* Container Utility */
@@ -67,19 +69,26 @@ nav .nav-link:hover { background-color: var(--clr-accent); color: var(--clr-text
 .home-about-text { width: 45%; padding: calc(var(--space-unit*0)) 5% }
 
 .carousel-container { position: relative; overflow: hidden; margin: calc(var(--space-unit)*0) 0; }
-.carousel-container .slide { width: 100%; height: 200px; background-color: var(--clr-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: opacity 0.5s ease-in-out; }
+.carousel-container .slide { width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 1.2rem; transition: opacity 1s ease-in-out; }
+.slide-a { background:linear-gradient(to right, var(--clr-tur), var(--clr-secondary)); }
+.slide-b { background:linear-gradient(to right, var(--clr-secondary), var(--clr-accent)); }
+.slide-c { background:linear-gradient(to right, var(--clr-accent), var(--clr-tur)); }
 
 .home-img { width: 300px; height: auto; border-radius: 10px; background-color: var(--clr-secondary); padding: 0.1%;}
 
-.lower-home-container { display: flex; gap: calc(var(--space-unit)*2); justify-content: space-between; background-color: var(--clr-secondary); padding: calc(var(--space-unit)*4) 0; }
-.home-card.card { flex: 1; margin: 0 var(--space-unit); background-color: var(--clr-card-bg); display: flex; flex-direction: column; align-items: center; padding: var(--space-unit); }
+.lower-home-container { display: flex; gap: calc(var(--space-unit)*0); justify-content: space-between; background-color: var(--clr-secondary); padding: calc(var(--space-unit)*1) 0; }
+.lower-home-container .img { width: 100px; height: auto; }
+.home-card.card { flex: 1; margin: 0 calc(var(--space-unit)*0.5); background-color: var(--clr-card-bg); display: flex; flex-direction: column; align-items: center; padding: var(--space-unit); }
 .links-card.card { padding: 0.5% 5%; margin: 0 calc(var(--space-unit)*0.5); background-color: var(--clr-card-bg); border-radius: 5px;}
 .card-header { width: 100%; text-align: center; margin-bottom: var(--space-unit); }
 .card-h3 { margin: 0; }
-.card-body img { max-width: 100%; height: auto; margin-bottom: var(--space-unit); }
+.card-body img { max-width: 100%; height: auto; margin-bottom: var(--space-unit);}
 .card-p { text-align: center; }
 .card-img { width: 100px; height: 100px; object-fit: contain;}
 .links-card-container { display: flex; justify-content: space-between; flex-direction: column; align-items: center; color: blue;}
+
+.card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.card-body .a { color: blue; }
 
 /* Accordion wrapper */
 .tab-item {
@@ -144,6 +153,36 @@ nav .nav-link:hover { background-color: var(--clr-accent); color: var(--clr-text
   padding: calc(var(--space-unit) * 1);
   margin: 0;
   background-color: white;
+}
+
+.info {
+  margin: 2%;
+}
+
+
+.games-container {
+  display: flex;
+  justify-content: space-between;
+  /* instead of centering them vertically, stretch them */
+  align-items: stretch;
+  /* optional: make them wrap on smaller screens */
+  flex-wrap: wrap;
+}
+
+.games-container .card {
+  /* each card takes an equal share of the row */
+  flex: 1 1 0;
+  /* prevents overflowing its own flex-basis when content is long */
+  min-width: 0;
+  /* your existing styling */
+  margin: 2%;
+  padding: 2%;
+  background-color: var(--clr-card-bg);
+  border-radius: 5px;
+}
+
+.contact-container {
+  display: flex; align-items: center; justify-content: center; padding: calc(var(--space-unit)*0.2) 2%; margin-right: auto; margin-left: auto; 
 }
 
 /* Responsive adjustments for accordion */

@@ -6,6 +6,9 @@ use crate::pages::home::Home;
 use crate::pages::about::About;
 use crate::pages::research::Research;
 use crate::pages::projects::Projects;
+use crate::pages::games::Games;
+use crate::pages::balestale::BalesTale;
+use crate::pages::contact::Contact;
 
 #[derive(Routable, Debug, Clone, PartialEq, Eq)]
 pub enum AppRoute {
@@ -23,6 +26,8 @@ pub enum AppRoute {
     Contact,
     #[at("/games")]
     Games,
+    #[at("/balestale")]
+    BalesTale,
 }
 
 pub fn switch(route: AppRoute) -> Html {
@@ -31,8 +36,9 @@ pub fn switch(route: AppRoute) -> Html {
         AppRoute::About => html! {<About />},
         AppRoute::Research => html! {<Research />},
         AppRoute::Projects => html! {<Projects />},
-        AppRoute::Games => html! {"TODO"},
-        AppRoute::Contact => html! {"TODO"},
+        AppRoute::Games => html! {<Games />},
+        AppRoute::Contact => html! {<Contact />},
+        AppRoute::BalesTale => html! {<BalesTale />},
     }
 }
 
